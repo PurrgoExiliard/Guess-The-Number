@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    user-select: none;
+}
+
+*:hover {
+    cursor: default;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.show {
+    animation: show 4s ease-in-out;
+    color: #aaa;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.expand {
+    position: relative;
+    left: 5vw;
+    transform: translate(-4vw, 0);
+    border: 1px #eee solid;
+    animation: expand2 3s ease-in-out;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 8vw;
+    height: 3vh;
+    overflow: hidden;
+    background-color: #22222e;
+}
+
+div.pulse {
+    animation: pulse 2s infinite;
+}
+
+span.pulse {
+    animation: pulseText 2s infinite;
+}
+
+@keyframes expand2 {
+    0% {
+        transform: translate(-4vw, 3vh);
+        height: 0;
+        width: 0;
+    }
+    50% {
+        transform: translate(-4vw, 0);
+        width: 0;
+        height: 3vh;
+    }
+    100% {
+        width: 8vw;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        background-color: #22222e;
+    }
+    50% {
+        background-color: #33333E;
+    }
+    100% {
+        background-color: #22222e;
+    }
+}
+
+@keyframes pulseText {
+    0% {
+        color: #aaa;
+    }
+    50% {
+        color: #fff;
+    }
+    100% {
+        color: #aaa;
+    }
+}
+
+body {
+    background-color: #22222e;
+}
+
+.hide {
+    animation: hide 2s ease-in-out;
+    color: #aaa;
+    opacity: 0;
+}
+
+@keyframes hide {
+    0% {
+        opacity: 1;
+        color: #aaa;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.title {
+    color: #eee;
+    animation: show 2s ease-in-out;
+}
+
+body {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+}
+
+.difTitle {
+    color: #eee;
+    padding-top: 5vh;
+    animation: show 2s ease-in-out;
+    word-spacing: 0.6vw;
+    text-align: center;
+    padding-bottom: 2vh;
+}
+
+.difs {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 20vw;
+}
+
+.buttonDiff {
+    border: #eee 1px solid;
+    border-radius: 10px;
+    width: 13vw;
+    height: 3vh;
+    background-color: #22222e;
+    color: #eee;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transition: .30s ease all;
+    -moz-transition: .30s ease all;
+    -o-transition: .30s ease all;
+    transition: .30s ease all;
+}
+
+.buttonDiff:hover {
+    background-color: #33333e;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transition: .30s ease all;
+    -moz-transition: .30s ease all;
+    -o-transition: .30s ease all;
+    transition: .30s ease all;
+}
+
+.hideD {
+    opacity: 0;
+    animation: hideD 1s ease-in-out;
+}
+
+@keyframes hideD {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.force {
+    background-color: #33333E;
+    animation: hide2 2s ease-in-out;
+    opacity: 0;
+}
+
+@keyframes hide2 {
+    0% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+span,
+h2,
+label {
+    color: #eee;
+}
+
+body div div {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 30vw !important;
+}
+
+button[onclick="checkInput(this)"],
+button[onclick="reset(this)"] {
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transition: .30s ease all;
+    -moz-transition: .30s ease all;
+    -o-transition: .30s ease all;
+    transition: .30s ease all;
+    background-color: #22222e;
+    color: #eee;
+    border: #eee 1px solid;
+    border-radius: 10px;
+    width: 6vw;
+    height: 3vh;
+}
+
+button[onclick="checkInput(this)"]:hover,
+button[onclick="reset(this)"]:hover {
+    background-color: #33333e;
+}
+
+body div {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 20vw;
+}
+
+.menu {
+    width: 30vw;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
